@@ -1,0 +1,979 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  background-color: black;
+  height: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+.lds-ripple,
+.lds-ripple div {
+  box-sizing: border-box;
+}
+
+.lds-ripple {
+  color: gray;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+  animation: fade_in 1s forwards;
+}
+
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid currentColor;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 8px;
+    height: 8px;
+    opacity: 0;
+  }
+
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 8px;
+    height: 8px;
+    opacity: 0;
+  }
+
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 8px;
+    height: 8px;
+    opacity: 1;
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+  }
+}
+
+.screen {
+  position: relative;
+  height: inherit;
+  background-color: black;
+  display: none;
+}
+
+.screen-1 .title img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: logo 12s cubic-bezier(0, 0, .1, .99);
+}
+
+.screen-1 .stars {
+  position: relative;
+  height: inherit;
+  color: white;
+}
+
+.screen-1 .stars p {
+  cursor: default;
+  position: absolute;
+  text-shadow: white 1px 0 20px;
+}
+
+.screen-2 {
+  display: none;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+@keyframes logo {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.01);
+  }
+}
+
+/* SCREEN 2 */
+
+.wishes {
+  text-align: center;
+  width: 100%;
+  color: gold;
+  font-size: 180%;
+  opacity: 1;
+  margin: auto 0;
+}
+
+.wishes h1 {
+  margin: 0;
+}
+
+.lightsabers {
+  display: flex;
+  width: inherit;
+  margin-top: auto;
+  align-items: end;
+}
+
+.lightsaber {
+  opacity: 0;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.hilt {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 150px;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.button {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.blade {
+  transform-origin: bottom;
+  height: 300px;
+  width: 16px;
+  margin-bottom: 16px;
+  border-radius: 10px 10px 0px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  transform: scaleY(0);
+}
+
+@keyframes openBlade {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+/* ------------------------------------------------------------------------- */
+/* lightsaber1 -> Luke(green) */
+
+.lightsaber1 {}
+
+
+
+.hilt1 {
+  /*background-color: #c4c4c4;*/
+  /*background-color: red; */
+}
+
+/* doulepse gamw th css mou mesa gamw*/
+.colorful-touch1 {
+  background-image: linear-gradient(white 0 10px,
+      gold 0 14px,
+      black 0 19px,
+      white 0 22px,
+      black 0 27px,
+      white 0 30px,
+      black 0 35px,
+      white 0 38px,
+      black 0 43px,
+      white 0 46px,
+      black 0 51px,
+      white 0 54px,
+      black 0 59px,
+      white 0 62px,
+      black 0 67px,
+      white 0 70px,
+      black 0 75px,
+      white 0 78px,
+      gold 0 88px,
+      white 0 100%);
+}
+
+.button1 {
+  top: 75%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #777;
+  border: 3px solid black;
+}
+
+.upper-shit1-1 {
+  position: absolute;
+  width: 11px;
+  height: 12px;
+  transform: translate(-50%, -50%);
+  top: -4%;
+  left: 50%;
+  background: silver;
+}
+
+.upper-shit2-1 {
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  background: silver;
+  rotate: 180deg;
+  top: -16px;
+  left: -50%;
+  transform: translateX(-50%);
+  border-top-left-radius: 50% 20px;
+  border-top-right-radius: 50% 20px;
+}
+
+.blade1 {
+  background: linear-gradient(90deg, rgba(143, 252, 135, 1) 0%, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 90%, rgba(143, 252, 135, 1) 100%);
+  box-shadow: 0 0 1em #6cff61, 0 0 1.5em #6cff61, 0 0 2em #6cff61;
+}
+
+/* -------------------------------------------------------------------- */
+/* lightsaber2 -> Mace Windu(mwb) */
+.lightsaber2 {}
+
+.hilt2 {}
+
+.colorful-touch2 {
+  background-image: linear-gradient(silver 0 40px,
+      hsl(50, 60%, 40%) 0 42px,
+      gold 0 46px,
+      hsl(50, 60%, 40%) 0 48px,
+      gold 0 52px,
+      hsl(50, 60%, 40%) 0 54px,
+      gold 0 58px,
+      hsl(50, 60%, 40%) 0 60px,
+      gold 0 64px,
+      silver 0 75px,
+      black 0 84px,
+      silver 0 100%);
+}
+
+.handle-part2-1 {
+  position: absolute;
+  width: 4px;
+  height: 18px;
+  transform: translate(-50%, -50%);
+  top: 15%;
+  left: 20%;
+  background: hsl(42, 100%, 65%);
+}
+
+.handle-part2-2 {
+  position: absolute;
+  width: 4px;
+  height: 18px;
+  transform: translate(-50%, -50%);
+  top: 15%;
+  left: 50%;
+  background: hsl(42, 100%, 65%);
+}
+
+.handle-part2-3 {
+  position: absolute;
+  width: 4px;
+  height: 18px;
+  transform: translate(-50%, -50%);
+  top: 15%;
+  left: 80%;
+  background: hsl(42, 100%, 65%);
+}
+
+.handle-part2-4 {
+  position: absolute;
+  width: 10px;
+  height: 50px;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+}
+
+.handle-part2-5 {
+  position: absolute;
+  width: 3px;
+  height: 54px;
+  transform: translateX(-50%);
+  bottom: 3px;
+  left: 50%;
+  border-radius: 4px;
+  background: hsl(0, 0%, 7%);
+}
+
+.handle-part2-6 {
+  position: absolute;
+  width: 4px;
+  height: 50px;
+  bottom: 5px;
+  background: black;
+  left: -3px;
+}
+
+.handle-part2-7 {
+  position: absolute;
+  width: 4px;
+  height: 50px;
+  bottom: 5px;
+  background: black;
+  right: -3px;
+}
+
+.handle-part2-8 {
+  position: absolute;
+  width: 15px;
+  height: 8px;
+  background: hsl(42, 100%, 65%);
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top-left-radius: 50% 20px;
+  border-top-right-radius: 50% 20px;
+}
+
+.upper-shit1-2 {
+  position: absolute;
+  width: 22px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  top: -4%;
+  left: 50%;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+  background: silver;
+}
+
+.upper-shit2-2 {
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background: gold;
+  rotate: 180deg;
+  top: -17px;
+  right: 50%;
+  transform: translateX(-50%);
+  border-radius: 70%;
+}
+
+.blade2 {
+  background: linear-gradient(90deg, rgba(188, 79, 218, 1) 0%, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 90%, rgba(188, 79, 218, 1) 100%);
+  box-shadow: 0 0 1em #bc4fda, 0 0 1.5em #bc4fda, 0 0 2em #bc4fda;
+}
+
+/* ------------------------------------------------------------------------ */
+/* lightsaber 3 -> Darth Maul(red) */
+
+lightsaber3 {}
+
+.hilt3 {
+  background-color: red;
+}
+
+.colorful-touch3 {
+  background-image: linear-gradient(silver 0 0%,
+      black 0 5%,
+      silver 0 8%,
+      black 0 11%,
+      silver 0 14%,
+      black 0 17%,
+      silver 0 41%,
+      black 0 43%,
+      silver 0 47%,
+      black 0 50%,
+      silver 0 75%,
+      black 0 78%,
+      silver 0 81%,
+      black 0 84%,
+      silver 0 87%,
+      black 0 90%,
+      silver 0 93%,
+      black 0 96%,
+      silver 0 100%);
+}
+
+.button3-1 {
+  position: absolute;
+  top: 69%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7px;
+  height: 7px;
+  background-color: white;
+  border-radius: 50%;
+  border: 3px solid grey;
+}
+
+.button3-2 {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7px;
+  height: 7px;
+  background-color: red;
+  border-radius: 50%;
+  border: 3px solid grey;
+}
+
+.button3-3 {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7px;
+  height: 7px;
+  background-color: white;
+  border-radius: 50%;
+  border: 3px solid grey;
+}
+
+.button3-4 {
+  position: absolute;
+  top: 23%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7px;
+  height: 7px;
+  background-color: red;
+  border-radius: 50%;
+  border: 3px solid grey;
+}
+
+.upper-shit1-3 {
+  position: absolute;
+  width: 22px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  top: -5%;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+  left: 50%;
+  background: silver;
+}
+
+.upper-shit2-3 {
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background: silver;
+  rotate: 180deg;
+  top: -17px;
+  left: -50%;
+  transform: translateX(-50%);
+  border-radius: 70%;
+}
+
+.blade3 {
+  background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 90%, rgba(255, 0, 0, 1) 100%);
+  box-shadow: 0 0 1em #ff0000, 0 0 1.5em #ff0000, 0 0 2em #ff0000;
+}
+
+/* lightsaber 4 -> Rey(yellow) */
+
+.hilt4 {
+  background-color: red;
+  box-shadow: none;
+}
+
+.colorful-touch4 {
+  background-image: linear-gradient(hsl(0, 0%, 18%) 0 30%,
+      burlywood 0 34%,
+      hsl(0, 0%, 18%) 0 35%,
+      burlywood 0 39%,
+      hsl(0, 0%, 18%) 0 40%,
+      hsl(30, 50%, 12%) 0 44%,
+      hsl(0, 0%, 18%) 0 45%,
+      hsl(30, 50%, 12%) 0 49%,
+      hsl(0, 0%, 18%) 0 50%,
+      hsl(30, 50%, 12%) 0 54%,
+      hsl(0, 0%, 18%) 0 55%,
+      burlywood 0 59%,
+      hsl(0, 0%, 18%) 0 60%,
+      burlywood 0 64%,
+      hsl(0, 0%, 18%) 0 65%,
+      burlywood 0 69%,
+      hsl(0, 0%, 18%) 0 70%,
+      burlywood 0 74%,
+      hsl(0, 0%, 18%) 0 100%);
+}
+
+.upper-shit1-4 {
+  position: absolute;
+  width: 22px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  top: -4%;
+  right: -60%;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+  background: hsl(0, 0%, 18%);
+}
+
+.upper-shit2-4 {
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background: hsl(0, 0%, 18%);
+  rotate: 180deg;
+  top: -12%;
+  left: -50%;
+  transform: translateX(-50%);
+  border-radius: 70%;
+}
+
+.bottom-shit4 {
+  position: absolute;
+  width: 22px;
+  height: 20px;
+  transform: rotate(180deg);
+  top: 98%;
+  right: -6%;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+  background: hsl(0, 0%, 18%);
+}
+
+.blade4 {
+  background: linear-gradient(90deg, rgba(255, 231, 67, 1) 0%, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 90%, rgba(255, 231, 67, 1) 100%);
+  box-shadow: 0 0 1em #ffe743, 0 0 1.5em #ffe743, 0 0 2em #ffe743;
+}
+
+/* lightsaber 5 -> DarkSaber(black) */
+
+.lightsaber5 {}
+
+.hilt5 {
+  height: 120px;
+}
+
+.colorful-touch5 {
+  background-image: linear-gradient(black 0 12px,
+      silver 0 20px,
+      black 0 27px,
+      silver 0 30px,
+      black 0 33px,
+      silver 0 35px,
+      black 0 38px,
+      silver 0 40px,
+      black 0 43px,
+      silver 0 45px,
+      black 0 48px,
+      silver 0 50px,
+      black 0 53px,
+      silver 0 55px,
+      black 0 58px,
+      silver 0 67px,
+      black 0 95px,
+      silver 0 100%);
+}
+
+
+.blade5 {
+  width: 20px;
+  height: 333px;
+  background: black;
+  margin-bottom: 0px;
+  border-radius: 95% 0.01vw 0 0;
+  box-shadow:
+    0 0 1em hsl(0, 0%, 100%),
+    0 0 1.2em hsl(0, 0%, 100%),
+    0 0 1.5em hsl(0, 0%, 100%),
+    0 0 1.8em hsl(0, 0%, 100%),
+    0 0 2em hsl(0, 0%, 100%);
+}
+
+
+/* ------------------------------------------------------------------------ */
+/* lightsaber 6 -> Rey2(orange) */
+
+.lightsaber6 {}
+
+.hilt6 {
+  background-color: red;
+}
+
+.colorful-touch6 {
+  background-image: linear-gradient(black 0 8%,
+      dimgrey 0 20%,
+      black 0 22%,
+      dimgrey 0 24%,
+      black 0 26%,
+      dimgrey 0 28%,
+      hsl(0, 0%, 80%) 0 70%,
+      dimgrey 0 72%,
+      black 0 74%,
+      dimgrey 0 76%,
+      black 0 78%,
+      dimgrey 0 100%);
+}
+
+.upper-shit1-6 {
+  position: absolute;
+  width: 22px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  top: -4%;
+  left: 50%;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+  background: dimgrey;
+}
+
+.upper-shit2-6 {
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background: dimgrey;
+  rotate: 180deg;
+  top: -12%;
+  left: -50%;
+  transform: translateX(-50%);
+  border-radius: 70%;
+}
+
+.handle-part6-1 {
+  position: absolute;
+  width: 6px;
+  height: 30px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background: grey;
+}
+
+.blade6 {
+  background: linear-gradient(90deg, rgba(255, 111, 0, 1) 0%, rgba(255, 187, 135, 1) 10%, rgba(255, 255, 255, 1) 50%, rgba(255, 187, 135, 1) 90%, rgba(255, 111, 0, 1) 100%);
+  box-shadow: 0 0 1em #ff6f00, 0 0 1.5em #ff6f00, 0 0 2em #ff6f00;
+}
+
+.screen-3 img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  opacity: 0;
+  /* height: 100%; */
+}
+
+/* lightsaber 7 -> Anakin Skywalker(blue) */
+
+.lightsaber7 {}
+
+.hilt7 {
+  background-color: red;
+}
+
+.colorful-touch7 {
+  background-image: linear-gradient(hsl(0, 0%, 70%) 0 30%,
+      black 0 34%,
+      hsl(0, 0%, 70%) 0 39%,
+      black 0 41%,
+      hsl(0, 0%, 70%) 0 46%,
+      black 0 48%,
+      hsl(0, 0%, 70%) 0 53%,
+      black 0 55%,
+      hsl(0, 0%, 70%) 0 60%,
+      black 0 64%,
+      hsl(0, 0%, 70%) 0 100%);
+}
+
+.button7 {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  border: 3px solid grey;
+}
+
+.handle-part7-1 {
+  position: absolute;
+  width: 8px;
+  height: 30px;
+  transform: translateY(-50%);
+  top: 47%;
+  left: -8px;
+  background: silver;
+}
+
+.handle-part7-1-2 {
+  position: absolute;
+  width: 4px;
+  height: 20px;
+  transform: translateY(-50%);
+  top: 47%;
+  left: -6px;
+  background-color: gold;
+}
+
+.handle-part7-2 {
+  position: absolute;
+  width: 10px;
+  height: 40px;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+}
+
+.handle-part7-3 {
+  position: absolute;
+  width: 3px;
+  height: 44px;
+  transform: translate(-50%, -50%);
+  top: 83%;
+  left: 50%;
+  border-radius: 4px;
+  background: hsl(0, 0%, 7%);
+}
+
+.handle-part7-4 {
+  position: absolute;
+  width: 4px;
+  height: 40px;
+  top: 70%;
+  background: black;
+  left: -3px;
+}
+
+.handle-part7-5 {
+  position: absolute;
+  width: 4px;
+  height: 40px;
+  top: 70%;
+  background: black;
+  right: -3px;
+}
+
+.bigger-side {
+  position: absolute;
+  width: 20px;
+  height: 15px;
+  transform: translate(-50%, -50%);
+  top: -7px;
+  left: 50%;
+  background: hsl(0, 0%, 70%);
+  border-radius: 8px 8px 0px 0px;
+  z-index: -1;
+}
+
+.upper-shit1-7 {
+  position: absolute;
+  width: 22px;
+  height: 10px;
+  background: hsl(0, 0%, 70%);
+  rotate: 180deg;
+  top: -3%;
+  left: -60%;
+  transform: translateX(-50%);
+  border-top-left-radius: 50% 20px;
+  border-top-right-radius: 50% 20px;
+}
+
+.upper-shit2-7 {
+  position: absolute;
+  width: 22px;
+  height: 3px;
+  background: hsl(0, 0%, 30%);
+  rotate: 180deg;
+  top: -4%;
+  left: -60%;
+  transform: translateX(-50%);
+  border-radius: 70%;
+  z-index: -1;
+}
+
+.blade7 {
+  background: linear-gradient(90deg, rgba(21, 0, 255, 1) 0%, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 90%, rgba(21, 0, 255, 1) 100%);
+  box-shadow: 0 0 1em #1500ff, 0 0 1.5em #1500ff, 0 0 2em #1500ff;
+  margin-bottom: 5px;
+}
+
+/* ----------------------------------------------------- */
+/* lightsaber 8 -> Ashoka(white) */
+
+.lightsaber8 {}
+
+.hilt8 {
+  background-color: red;
+}
+
+.colorful-touch8 {
+  background-image: linear-gradient(silver 0 6%,
+      black 0 7%,
+      silver 0 8%,
+      black 0 8.5%,
+      silver 0 60%,
+      black 0 64%,
+      silver 0 66%,
+      black 0 70%,
+      silver 0 72%,
+      black 0 76%,
+      silver 0 94%,
+      black 0 95%,
+      silver 0 96%,
+      black 0 96.5%,
+      silver 0 98%,
+      black 0 98.5%,
+      silver 0 100%);
+}
+
+.handle-part8 {
+  position: absolute;
+  width: 12px;
+  height: 60px;
+  transform: translate(-50%, -50%);
+  top: 38%;
+  left: 50%;
+  background: hsl(0, 0%, 30%);
+  border-radius: 0 0 25% 25%;
+}
+
+.rhombus-1 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: silver;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg) skew(20deg, 20deg);
+}
+
+.rhombus-2 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: silver;
+  top: 68%;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg) skew(20deg, 20deg);
+}
+
+.button8 {
+  position: absolute;
+  top: 83%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: hsl(0, 0%, 50%);
+  border-radius: 50%;
+  border: 3px solid hsl(0, 0%, 40%);
+}
+
+.button8-1 {
+  position: absolute;
+  top: 21%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  background-color: black;
+  border-radius: 50%;
+  border: 2px solid hsl(42, 100%, 50%);
+  z-index: 2;
+}
+
+.upper-shit1-8 {
+  position: absolute;
+  width: 22px;
+  height: 10px;
+  background: hsl(42, 100%, 60%);
+  rotate: 180deg;
+  top: -3%;
+  left: -60%;
+  transform: translateX(-50%);
+  border-top-left-radius: 50% 20px;
+  border-top-right-radius: 50% 20px;
+}
+
+.upper-shit2-8 {
+  position: absolute;
+  width: 22px;
+  height: 3px;
+  background: hsl(0, 0%, 50%);
+  rotate: 180deg;
+  top: -4%;
+  left: -60%;
+  transform: translateX(-50%);
+  border-radius: 70%;
+  z-index: -1;
+}
+
+.triangle {
+  position: absolute;
+  transform: translateX(-50%) rotate(0deg);
+  top: 17px;
+  left: 50%;
+  width: 12px;
+  height: 10px;
+  background: linear-gradient(to bottom right, silver 0%, silver 50%, hsl(0, 0%, 30%) 50%, hsl(0, 0%, 30%) 100%);
+}
+
+.blade8 {
+  margin-bottom: 6px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 1) 100%);
+  box-shadow: 0 0 1em #ffffff, 0 0 1.5em #ffffff, 0 0 2em #ffffff;
+}
+
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade_out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+/* LETS FUCKING GOOOOOOOOOOOOOO */
+/* WE COOKED ONCE AGAIN */
+/* IT'S OVER */
+/* MAY THE 4TH BE WITH YOU TEO THANK YOU SO MUCH */
